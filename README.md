@@ -1,6 +1,18 @@
 # Financial News Sentiment Analysis & Fed Rate Prediction
 
-A Natural Language Processing project that predicts Federal Reserve interest rates using news headlines sentiment analysis. This project demonstrates the application of NLP techniques in quantitative finance by analyzing the relationship between media sentiment and monetary policy decisions.
+A Natural Language Processing project that explores semantic relationships between financial news sentiment and Federal Reserve monetary policy decisions. This project demonstrates advanced NLP techniques in quantitative finance by investigating how media narratives can predict and explain interest rate movements through transformer-based semantic analysis.
+
+## Research Subject
+
+In this project, we explore semantic similarity between different financial periods based on sentiments expressed in financial news headlines. Using advanced natural language processing techniques, we collect and analyze a comprehensive set of financial news headlines covering the critical period of 2008-2013, including the financial crisis and economic recovery phase.
+
+Our primary focus is on extracting and cleaning financial news headlines to capture dominant narratives that influence Federal Reserve monetary policy decisions. To analyze these textual contents, we use Transformer-based language models (SBERT) to encode textual content into vectors that capture semantic similarity of words and financial concepts.
+
+These embeddings are used to calculate similarity scores between different temporal periods based on their dominant economic narratives. Our objective is to identify natural clusters or proximities between different economic phases, potentially reflecting shared sectoral exposures (regulatory risk, technological disruption, geopolitical uncertainty) or temporal patterns (risks emphasized before or during economic crises).
+
+In the second part of the project, we investigate whether semantic similarity in news sentiment aligns with Federal Reserve interest rate behavior. More precisely, we compare textual similarity scores between different periods with correlations of Fed rate movements, calculated over corresponding temporal windows. By doing so, we seek to explore whether periods that exhibit similar sentiment profiles also tend to show coordinated rate movements.
+
+We employ tools such as cosine similarity, t-SNE for visualization, hierarchical clustering, and correlation/regression analysis to evaluate this relationship. This approach could offer valuable insights for understanding monetary policy cycles, systemic risk propagation, or text-based financial modeling.
 
 ## Project Overview
 
@@ -96,56 +108,56 @@ The project compares two text representation approaches:
 
 **Note**: Negative R² scores indicate that the models are currently underperforming compared to a simple mean baseline, suggesting opportunities for model improvement through feature engineering, hyperparameter tuning, or alternative approaches.
 
-## Résultats Visuels et Analyse
+## Visual Results and Analysis
 
-### Graphiques de Dispersion (Prédictions vs Réalité)
+### Scatter Plots (Predictions vs Reality)
 
 #### TF-IDF Model Performance
 ![TF-IDF Scatter Plot](figures/scatter_tf_idf.png)
 
-**Analyse**: Ce graphique de dispersion compare les prédictions du modèle TF-IDF avec les valeurs réelles des taux de la Fed. On observe :
-- Une dispersion importante des points autour de la ligne de régression idéale
-- Le modèle a tendance à sous-estimer les taux élevés (points au-dessus de la ligne)
-- Les prédictions sont concentrées dans une gamme plus étroite que les valeurs réelles
-- Le R² négatif (-0.1456) confirme que le modèle performe moins bien qu'une simple moyenne
+**Analysis**: This scatter plot compares the predictions of the TF-IDF model with the actual Fed rates. We observe:
+- A significant dispersion of points around the ideal regression line
+- The model tends to underestimate high rates (points above the line)
+- Predictions are concentrated in a narrower range than the actual values
+- The negative R² (-0.1456) confirms that the model performs worse than a simple average
 
 #### SBERT Model Performance  
 ![SBERT Scatter Plot](figures/scatter_sbert.png)
 
-**Analyse**: Le modèle SBERT montre une amélioration notable par rapport au TF-IDF :
-- Dispersion légèrement réduite des prédictions
-- Meilleure capture des variations dans les taux moyens
-- R² moins négatif (-0.0628) indiquant une performance supérieure
-- Les embeddings SBERT capturent mieux la sémantique des headlines financières
+**Analysis**: The SBERT model shows a notable improvement over TF-IDF:
+- Slightly reduced dispersion of predictions
+- Better capture of variations in average rates
+- Less negative R² (-0.0628) indicating superior performance
+- SBERT embeddings capture the semantics of financial headlines better
 
-### Évolution Temporelle des Prédictions
+### Temporal Evolution of Predictions
 
 #### TF-IDF Time Series Analysis
 ![TF-IDF Time Series](figures/curve_tf_idf.png)
 
-**Analyse**: Cette courbe temporelle révèle :
-- **Période 2008-2009**: Le modèle ne capture pas bien la chute drastique des taux pendant la crise financière
-- **2010-2011**: Sous-estimation persistante de la stabilité des taux bas
-- **2012-2013**: Amélioration relative mais toujours des écarts significatifs
-- Le modèle TF-IDF peine à saisir les changements de régime monétaire
+**Analysis**: This time series curve reveals:
+- **2008-2009 Period**: The model does not capture well the drastic rate drop during the financial crisis
+- **2010-2011**: Persistent underestimation of the stability of low rates
+- **2012-2013**: Relative improvement but still significant gaps
+- The TF-IDF model struggles to grasp monetary regime changes
 
 #### SBERT Time Series Analysis
 ![SBERT Time Series](figures/curve_sbert.png)
 
-**Analyse**: Les embeddings SBERT montrent :
-- **Meilleure réactivité** aux changements de sentiment dans les news
-- **Suivi plus fidèle** des tendances générales des taux
-- **Moins de retard** dans la détection des changements de politique monétaire
-- Les représentations contextuelles capturent mieux les nuances du langage financier
+**Analysis**: The SBERT embeddings show:
+- **Better responsiveness** to changes in news sentiment
+- **Closer tracking** of the general rate trends
+- **Less lag** in detecting changes in monetary policy
+- The contextual representations capture better the nuances of financial language
 
-### Observations Clés des Visualisations
+### Key Observations from Visualizations
 
-1. **Supériorité de SBERT**: Les graphiques confirment quantitativement et visuellement que SBERT surpasse TF-IDF
-2. **Défis de Prédiction**: Les deux modèles montrent les difficultés à prédire les mouvements de taux basés uniquement sur les headlines
-3. **Patterns Temporels**: La période de crise (2008-2009) est particulièrement difficile à modéliser
-4. **Variance Limitée**: Les modèles tendent à prédire dans une gamme plus restreinte que la réalité
+1. **Superiority of SBERT**: The graphs quantitatively and visually confirm that SBERT outperforms TF-IDF
+2. **Prediction Challenges**: Both models show difficulties in predicting rate movements based solely on headlines
+3. **Temporal Patterns**: The crisis period (2008-2009) is particularly challenging to model
+4. **Limited Variance**: The models tend to predict within a narrower range than reality
 
-Ces résultats suggèrent que bien que SBERT soit prometteur, des améliorations sont nécessaires pour capturer pleinement la complexité de la relation entre sentiment médiatique et politique monétaire.
+These results suggest that while SBERT is promising, improvements are needed to fully capture the complexity of the relationship between media sentiment and monetary policy.
 
 ## Key Insights
 

@@ -111,9 +111,9 @@ def build_dataset(fed_csv_path, headlines_csv_path=None, rss_urls=None, save_pat
     # Sauvegarde éventuelle
     if save_path:
         df_merged.to_csv(save_path, index=False)
-        print(f"✅ Dataset fusionné sauvegardé : {save_path}")
+        print(f"Dataset fusionné sauvegardé : {save_path}")
         print(
-            f"🔎 {len(df_merged)} lignes fusionnées sur {len(df_grouped)} mois de headlines et {len(df_rates)} taux."
+            f"{len(df_merged)} lignes fusionnées sur {len(df_grouped)} mois de headlines et {len(df_rates)} taux."
         )
 
     return df_merged
