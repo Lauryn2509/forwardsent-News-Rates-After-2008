@@ -1,0 +1,87 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Machine Learning / Data Science
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+models/
+checkpoints/
+
+# Large data files (but keep smaller CSV files)
+*.parquet
+*.feather
+*.json.gz
+*.csv.gz
+
+# Logs and debugging
+*.log
+logs/
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# GPU memory dumps
+*.gpu
+
+# Model artifacts
+wandb/
+
+# Specific to this project
+# Keep essential data files but ignore temporary ones
+data/temp/
+data/cache/
+figures/temp/
