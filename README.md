@@ -44,7 +44,7 @@ This project explores how financial news headlines can be used to predict Federa
 ## Project Structure
 
 ```
-nlp_laulouks/
+forwardsent-News-Rates-After-2008/
 ├── main.py                 # Main execution script
 ├── README.md              # Project documentation
 ├── requirements.txt       # Python dependencies
