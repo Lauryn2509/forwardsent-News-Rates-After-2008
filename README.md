@@ -74,12 +74,6 @@ python --version  # Ensure Python 3.11+
 pip --version     # Ensure pip is installed
 ```
 
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/enzomontariol/nlp_laulouks.git
-cd nlp_laulouks
-
 # Install dependencies
 pip install -r requirements.txt
 ```
